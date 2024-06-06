@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/UserActions.js"></script>
+</head>
+<body>
+    <h1>עדכון פרטים</h1>
+    <label>שם פרטי</label>
+    <input id="firstName" />
+    <br /><br />
+    <label>שם משפחה</label>
+    <input id="lastName" />
+    <br /><br />
+    <label>שם משתמש</label>
+    <input id="email" />
+    <br /><br />
+    <label>סיסמה</label>
+    <input type="password" id="password" oninput="checkStrongPassword()" />
+    <progress id="password-strength-progress" max="4" value="0"></progress>
+    <br /><br />
+    <button  onclick="updateDetails()">שמירה</button>
+    <br /><br />
+</body>
+</html>
