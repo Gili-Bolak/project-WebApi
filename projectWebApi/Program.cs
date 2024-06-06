@@ -41,8 +41,10 @@ app.UseStaticFiles();
 
 app.UseAuthorization();
 
-app.UseRatingMiddleware();
 app.UseErrorHandlingMiddleware();
+
+app.UseRatingMiddleware();
+
 
 app.MapControllers();
 
