@@ -1,155 +1,107 @@
-﻿html, body {
-    direction: rtl;
+﻿
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
     margin: 0;
     padding: 0;
+    direction: rtl;
 }
 
 .cart {
-    width: 960px;
-    margin: 0 auto;
-}
-th {
-    padding: 9px 11px;
-    text-align: right;
-    border-top: 1px solid #C7C5C5;
-    border-bottom: 1px solid #C7C5C5;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 6px 0px;
-    font-family: 'azo-sans', sans-serif;
-    text-transform: uppercase;
-}
- td.imageColumn {
-    width: 66px;
-}
-
-th.itemsColumn,td.imageColumn {
-    padding-right: 10px;
-}
-
-td {
-    padding: 15px;
-    padding-right: 0;
-    vertical-align: top;
-    border-bottom: 1px solid #C7C5C5;
-}
-
-
-.itemName, .subItemName {
-    font-family: 'azo-sans', sans-serif;
-    font-weight: 400;
-    margin-bottom: 2px;
-    font-size: 14px;
-    line-height: 100%;
-}
-
-
-.availabilityColumn {
-    width: 205px;
-    min-width: 205px;
-    max-width: 205px;
-    font-size: 14px;
-    color: #4D8958;
-    font-family: 'azo-sans', sans-serif;
-}
-.imageColumn div {
-    width: 66px;
-    height: 99px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.delete a.showText {
-    text-indent: 0;
-    width: 90px;
-    padding-left: 10px;
-    background-image: url(/Images/icn-remove.png);
-    height: 24px;
-    background-position: left -3px;
-    font-size: 11px !important;
-    line-height: 15px;
-    position:relative;
-}
-
-.delete a {
-    display: block;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    text-align: right;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color:black;
-}
-
-.price {
-    font-weight: 500;
-    font-size: 16px;
-    margin-bottom: 2px;
-    font-family: 'azo-sans', sans-serif;
-    font-weight: 600 !important;
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+    background-color: #ffffff;
 }
 
 #title {
-    margin: 8px 0 12px;
-    padding-left: 15px;
+    text-align: center;
 }
 
     #title h1 {
-        margin: 15px 0 2px 0;
-        font-family: 'azo-sans', sans-serif;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 100%;
-        float: right;
+        color: #2c3e50;
     }
 
-h1 {
-    font: 236.36% 'azo-sans',sans-serif;
-}
+    #title p {
+        color: #34495e;
+        font-size: 1.2em;
+    }
 
-#title p {
-    font-size: 11px;
-    float: right;
-    padding-right: 10px;
-    padding-top: 19px;
-}
-
-p, fieldset {
-    margin-bottom: 1em;
-}
-
-a.GoToCheckout.TopLink {
-    margin-top: 10px;
-}
-
-.ShoppingBag a.GoToCheckout {
-    float: left;
-    margin-right: 23px;
-}
-
-.nxbtn.primary {
-    background: #1a6461;
-    font-size: 11px;
-}
-
-.nxbtn.primary, .nxbtn.secondary {
-    padding-top: 6px;
-    padding-bottom: 7px;
-    color: #fff;
-    border: 0;
-    text-transform: uppercase;
-    font-family: 'azo-sans',sans-serif;
-}
-
-.ContentArea a {
-    color: #111;
+.nxbtn.primary.GoToCheckout {
+    background-color: #16a085;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    margin: 10px;
 }
 
-.nxbtn {
-    border-radius: 3px;
+    .nxbtn.primary.GoToCheckout:hover {
+        background-color: #138d75;
+    }
+
+.shopmore {
+    background-color: #2980b9;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
     display: inline-block;
-    padding: 4px 10px;
+    margin: 10px;
+}
+
+    .shopmore:hover {
+        background-color: #2471a3;
+    }
+
+.cistGroup {
+    margin-top: 20px;
+}
+
+table.items {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table.items th, table.items td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: right;
+    }
+
+    table.items th {
+        background-color: #f8f9fa;
+        color: #2c3e50;
+    }
+
+    table.items td img {
+        max-width: 100%;
+    }
+
+button#remove, button#plus, button#minos {
+    background-color: #16a085;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    button#remove:hover, button#plus:hover, button#minos:hover {
+        background-color: #138d75;
+    }
+
+.quantity-num {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.ClearBoth {
+    clear: both;
 }

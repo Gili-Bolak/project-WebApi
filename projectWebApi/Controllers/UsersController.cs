@@ -53,7 +53,7 @@ namespace projectWebApi.Controllers
         {
            int score= _userService.StrongPassword(user.Password);
             if (score < 2)
-                return BadRequest("Password Validation Failed");
+                return BadRequest();
             User NewUser = await _userService.Register(user);
             if (NewUser == null)
                 return ValidationProblem();

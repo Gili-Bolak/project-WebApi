@@ -1,11 +1,11 @@
 ﻿let minPrice = 0;
 let maxPrice = 1000000;
-let description = '';
+let productName = '';
 let categoryIds = '';
 
 
 const getAllProducts = async () => {
-    const response = await fetch(`api/products?minPrice=${minPrice}&maxPrice=${maxPrice}&description=${description}${categoryIds}`);
+    const response = await fetch(`api/products?minPrice=${minPrice}&maxPrice=${maxPrice}&productName=${productName}${categoryIds}`);
     if (response.ok) {
         const products = await response.json();
 
@@ -148,7 +148,7 @@ const drawCategories = (categories) => {
 const filterProducts = () => {
     minPrice = document.getElementById('minPrice').value;
     maxPrice = document.getElementById('maxPrice').value;
-    description = document.getElementById('nameSearch').value;
+    productName = document.getElementById('nameSearch').value;
     
 
     const opt = document.getElementsByClassName('opt');

@@ -41,10 +41,7 @@ const checkStrongPassword = async () => {
 
     const strong = await response.json();
     if (response.ok) {
-        progress.value = strong;
-        if (strong >= 2) {
-
-        }
+        progress.value = strong; 
     }
 }
 
@@ -63,7 +60,7 @@ const login = async () => {
     const login = await response.json();
     if (response.ok) {
         sessionStorage.setItem("userId", JSON.stringify(login.userId))
-        window.location.href = "HomePage.html"
+        window.location.href = "Products.html"
     }
     else {
         alert("שם משתמש או הסיסמה אינם נכונים")
@@ -91,7 +88,7 @@ const updateDetails = async () => {
     else {
         if (response.ok) {
             alert("הפרטים עודכנו בהצלחה");
-            window.location.href = "HomePage.html";
+            window.location.href = "Products.html";
         }
     }
 }

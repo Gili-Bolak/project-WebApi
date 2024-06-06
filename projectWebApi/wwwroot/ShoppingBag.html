@@ -5,14 +5,10 @@
     <title></title>
     <link href="css/ShoppingBag.css" rel="stylesheet" />
 
-
     <template id="temp-row">
         <tr class="item-row">
-
             <td class="imageColumn">
-                <a rel="lightbox" href="#">
-                    <div class="image"><img src="tmp.jpg" alt="" style="width:100%"></div>
-                </a>
+                <div class="image"><img src="tmp.jpg" alt="" style="width:100%"></div>
             </td>
 
             <td class="descriptionColumn">
@@ -30,12 +26,13 @@
             </td>
 
             <td class="totalColumn delete">
-                <button>הסרת פריט</button>
+                <button onclick="removeProductFromBasket()">הסרת פריט</button>
             </td>
-
 
         </tr>
     </template>
+
+
 
 
 </head>
@@ -56,7 +53,7 @@
                         <th class="descriptionColumn">תיאור מוצר</th>
                         <th class="QuantityColumn">כמות</th>
                         <th class="PriceColumn">מחיר</th>
-                        <th class="totalColumn"> </th>
+                        <th class="totalColumn"></th>
                     </tr>
                 </thead>
                 <tbody></tbody>

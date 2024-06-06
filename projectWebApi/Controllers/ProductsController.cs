@@ -24,9 +24,9 @@ namespace projectWebApi.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductDto>>> Get([FromQuery] int? minPrice, [FromQuery] int? maxPrice, [FromQuery] int?[] categoryIds, [FromQuery] string? description)
+        public async Task<ActionResult<List<ProductDto>>> Get([FromQuery] int? minPrice, [FromQuery] int? maxPrice, [FromQuery] int?[] categoryIds, [FromQuery] string? productName)
         {
-            List<Product> products = await _productService.GetAllProducts(minPrice, maxPrice, categoryIds, description);
+            List<Product> products = await _productService.GetAllProducts(minPrice, maxPrice, categoryIds, productName);
             if(products == null)
             {
                 return NotFound();
@@ -37,26 +37,5 @@ namespace projectWebApi.Controllers
         }
 
 
-
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
     }
 }

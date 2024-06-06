@@ -5,13 +5,15 @@ let totalPrice = 0;
 const drawProducts = () => {
     const basket = JSON.parse(sessionStorage.getItem("basket")) || [];
     const template = document.getElementById("temp-row");
+
     basket.forEach((p) => {
         const card = template.content.cloneNode(true)
         card.querySelector('img').src = '../Images/' + p.product.imageUrl
         card.querySelector('.description').textContent = p.product.productName
         card.querySelector('.quantity').textContent = p.quantity
         card.querySelector('.price').textContent = "₪" + p.product.price * p.quantity
-        card.querySelector('button').addEventListener('click', () => { removeProductFromBasket(p) } );
+        card.querySelector('button').addEventListener('click', () => { removeProductFromBasket(p) });
+
         document.getElementById("items").appendChild(card)
     });
     updateMessage(basket);
